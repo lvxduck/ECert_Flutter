@@ -37,7 +37,7 @@ class SignUpWarning extends StatelessWidget {
               clickMessage: "Đã sao chép",
               onTap: () {
                 Clipboard.setData(
-                  const ClipboardData(text: "f82caf65b481bce79a68fe76b88a0ee032205caf1bae23f1e51eb8395cadd86d"),
+                  ClipboardData(text: _controller.privateKey),
                 );
               },
               child: Stack(
@@ -48,9 +48,9 @@ class SignUpWarning extends StatelessWidget {
                       borderRadius: BorderRadius.circular(6),
                       border: Border.all(color: CustomTheme.lightColorScheme.primary, width: 2),
                     ),
-                    child: const Text(
-                      "f82caf65b481bce79a68fe76b88a0ee032205caf1bae23f1e51eb8395cadd86d",
-                      style: TextStyle(fontSize: 15),
+                    child: Text(
+                      _controller.privateKey,
+                      style: const TextStyle(fontSize: 15),
                     ),
                   ),
                   Positioned(
@@ -67,7 +67,7 @@ class SignUpWarning extends StatelessWidget {
             const SizedBox(height: 32),
             RichText(
               text: TextSpan(
-                text: "Cảnh báo:",
+                text: "Cảnh báo: ",
                 style: TextStyle(fontSize: 14, color: CustomTheme.lightColorScheme.error, fontWeight: FontWeight.bold),
                 children: const [
                   TextSpan(

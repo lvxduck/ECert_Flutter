@@ -47,7 +47,7 @@ class CustomTheme {
         hintStyle: TextStyle(color: Colors.grey[400]),
         contentPadding: const EdgeInsets.symmetric(
           vertical: 10,
-          horizontal: 14,
+          horizontal: 16,
         ),
       ),
     );
@@ -76,7 +76,7 @@ class CustomTheme {
 
   static final TextTheme _textTheme = TextTheme(
     headline3: GoogleFonts.roboto(fontWeight: _bold, fontSize: 32.0, color: Colors.black),
-    headline4: GoogleFonts.roboto(fontWeight: _bold, fontSize: 20.0),
+    headline4: GoogleFonts.roboto(fontWeight: _bold, fontSize: 20.0, color: Colors.black),
     headline5: GoogleFonts.roboto(fontWeight: _medium, fontSize: 16.0),
     headline6: GoogleFonts.roboto(fontWeight: _bold, fontSize: 16.0),
     caption: GoogleFonts.roboto(fontWeight: _semiBold, fontSize: 16.0),

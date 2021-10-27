@@ -13,10 +13,11 @@ class CardSetupWrapper extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: RadialGradient(
               colors: [
-                const Color(0x4B0B66BF),
+                const Color(0x6B0B66BF),
                 CustomTheme.lightColorScheme.primary,
               ],
-              radius: 0.5,
+              stops: const [0, 0.7],
+              radius: 0.6,
             ),
           ),
         ),

@@ -1,4 +1,4 @@
-import 'package:ecert/core/widget/dialog.dart';
+import 'package:ecert/core/widget/custom_dialog.dart';
 import 'package:ecert/features/home/view/home.dart';
 import 'package:ecert/features/sign_up/view/sign_up.dart';
 import 'package:flutter/material.dart';

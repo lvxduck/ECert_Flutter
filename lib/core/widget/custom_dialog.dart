@@ -34,7 +34,7 @@ class CustomDialog {
           child: Container(
             height: 232,
             width: 280,
-            padding: EdgeInsets.all(28),
+            padding: const EdgeInsets.all(28),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(8),
@@ -55,10 +55,29 @@ class CustomDialog {
                 ),
                 ElevatedButton(
                   onPressed: Get.back,
-                  child: Text("Tôi đã hiểu"),
+                  child: const Text("Tôi đã hiểu"),
                 ),
               ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  static void showModal({required double width, required double height, required Widget child}) {
+    Get.dialog(
+      Material(
+        color: Colors.transparent,
+        child: Align(
+          child: Container(
+            height: height,
+            width: width,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: child,
           ),
         ),
       ),

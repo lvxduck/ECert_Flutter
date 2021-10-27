@@ -83,7 +83,7 @@ class CustomTheme {
     overline: GoogleFonts.roboto(fontWeight: _medium, fontSize: 12.0),
     bodyText1: GoogleFonts.roboto(fontWeight: _regular, fontSize: 14.0),
     subtitle1: GoogleFonts.roboto(fontWeight: _medium, fontSize: 16.0),
-    bodyText2: GoogleFonts.roboto(fontWeight: _regular, fontSize: 16.0),
+    bodyText2: GoogleFonts.roboto(fontWeight: _regular, fontSize: 16.0, color: Colors.black),
     subtitle2: GoogleFonts.roboto(fontWeight: _medium, fontSize: 14.0),
     button: GoogleFonts.roboto(fontWeight: _semiBold, fontSize: 18.0),
   );

@@ -70,7 +70,7 @@ class Home extends StatelessWidget {
                 SizedBox(
                   height: 38,
                   child: ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: _controller.addCertificate,
                     label: Text(
                       "Thêm",
                       style: Get.textTheme.subtitle2?.copyWith(color: Colors.white),

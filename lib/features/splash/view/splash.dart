@@ -1,5 +1,3 @@
-import 'package:ecert/features/login/view/login.dart';
-import 'package:ecert/features/setup/view/setup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,7 +7,7 @@ class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1800), () {
-      Get.offAll(() => Setup());
+      // Get.offAll(() => Setup());
     });
     return Scaffold(
       body: Column(

@@ -2,6 +2,7 @@ import 'package:ecert/core/helper/extension.dart';
 import 'package:ecert/core/helper/ipfs_utils.dart';
 import 'package:ecert/core/widget/dialog.dart';
 import 'package:ecert/features/login/view/login.dart';
+import 'package:ecert/features/sign_up_warning/view/sign_up_warning.dart';
 import 'package:filepicker_windows/filepicker_windows.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,6 +16,7 @@ class SignUpController extends GetxController {
       CustomDialog.showLoading();
       await Future.delayed(1.seconds);
       Get.back();
+      Get.to(SignUpWarning());
     }
   }
 

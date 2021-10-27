@@ -61,7 +61,7 @@ class CustomTheme {
     background: Color(0xFFFFFFFF),
     surface: Color(0xffF4F7FB),
     onBackground: Color(0xff334D6E),
-    error: Color(0xFFB00020),
+    error: Color(0xFFB00020), //E12B2B
     onError: Colors.white,
     onPrimary: Colors.white,
     onSecondary: Colors.white,
@@ -85,6 +85,6 @@ class CustomTheme {
     subtitle1: GoogleFonts.roboto(fontWeight: _medium, fontSize: 16.0),
     bodyText2: GoogleFonts.roboto(fontWeight: _regular, fontSize: 16.0),
     subtitle2: GoogleFonts.roboto(fontWeight: _medium, fontSize: 14.0),
-    button: GoogleFonts.roboto(fontWeight: _semiBold, fontSize: 18.0, color: Colors.red),
+    button: GoogleFonts.roboto(fontWeight: _semiBold, fontSize: 18.0),
   );
 }

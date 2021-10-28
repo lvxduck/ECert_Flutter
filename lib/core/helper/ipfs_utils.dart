@@ -1,9 +1,11 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:ecert/core/helper/extension.dart';
 import 'package:ecert/core/ipfs_client/ipfs_client.dart';
 import 'package:ecert/core/ipfs_client/models/unix_fs_entry.dart';
 import 'package:http_parser/http_parser.dart';
+import 'package:http/http.dart' as http;
 
 class IpfsUtils {
   static final _singleton = IpfsUtils._init();
@@ -24,12 +26,22 @@ class IpfsUtils {
     return res;
   }
 
-  Future<UnixFSEntry?> uploadJson(File imageFile) async {
+  Future<UnixFSEntry?> uploadJsonData({
+    required String content,
+    String name = "ecert_certificate",
+  }) async {
     var file = UnixFSEntry();
-    file.content = await imageFile.readAsBytes();
-    file.name = imageFile.name ?? "avata.png";
-    file.contentType = MediaType.parse("image/png");
+    file.content = content;
+    file.name = name;
+    file.contentType = MediaType.parse("text/plain");
     final res = await _ipfsClient.add(file);
     return res;
+  }
+
+  Future<String> getData(String cid) async {
+    // final res = await _ipfsClient.get("https://ipfs.io/ipfs/${cid}").first;
+    final http.Response res = await http.get(Uri.parse("https://ipfs.io/ipfs/${cid}"));
+    String body = utf8.decode(res.bodyBytes);
+    return body;
   }
 }

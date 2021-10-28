@@ -25,6 +25,8 @@ class SignUp extends StatelessWidget {
               ),
               Expanded(
                 child: InkWell(
+                  hoverColor: Colors.transparent,
+                  splashColor: Colors.transparent,
                   onTap: _controller.upLoadImage,
                   child: Obx(
                     () => Avatar(

@@ -65,21 +65,54 @@ class CustomDialog {
     );
   }
 
-  static void showModal({required double width, required double height, required Widget child}) {
-    Get.dialog(
+  static Future showModal({required double width, required double height, required Widget child}) {
+    return Get.dialog(
       Material(
         color: Colors.transparent,
-        child: Align(
-          child: Container(
-            height: height,
-            width: width,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8),
+        child: InkWell(
+          splashColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          onTap: Get.back,
+          child: Align(
+            child: InkWell(
+              splashColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              onTap: () {},
+              child: Container(
+                height: height,
+                width: width,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: child,
+              ),
             ),
-            child: child,
           ),
         ),
+      ),
+    );
+  }
+
+  static void showAlertDialog(String title, String content) {
+    Get.dialog(
+      AlertDialog(
+        title: Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        contentPadding: const EdgeInsets.only(left: 18, right: 18, top: 12),
+        titlePadding: const EdgeInsets.only(left: 18, right: 18, top: 18),
+        buttonPadding: const EdgeInsets.only(left: 18, right: 18, bottom: 10),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        content: Text(content),
+        actions: <Widget>[
+          Align(
+              child: ElevatedButton(
+            onPressed: Get.back,
+            child: const Text(
+              "Đóng",
+              style: TextStyle(fontSize: 16, color: Colors.white),
+            ),
+          )),
+        ],
       ),
     );
   }

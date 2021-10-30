@@ -4,7 +4,6 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'package:http/http.dart' as http;
 import 'package:archive/archive.dart';
-
 import 'files/files_api.dart';
 import 'models/cid.dart';
 import 'models/unix_fs_entry.dart';

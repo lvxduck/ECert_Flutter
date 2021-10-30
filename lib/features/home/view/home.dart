@@ -1,6 +1,6 @@
 import 'package:ecert/core/svg_icon.dart';
 import 'package:ecert/features/home/controller/home_controller.dart';
-import 'package:ecert/features/home/model/app_bar.dart';
+import 'package:ecert/features/home/widget/app_bar.dart';
 import 'package:ecert/theme/theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const TextStyle headerStyle = TextStyle(color: Colors.white);
-    const int rowsPerPage = 3;
+    const int rowsPerPage = 15;
 
     return Scaffold(
       appBar: appBar(),
@@ -46,7 +46,7 @@ class Home extends StatelessWidget {
                   child: Obx(() {
                     return SfDataPager(
                       delegate: _controller.orderInfoDataSource.value,
-                      pageCount: _controller.dataCert.length / rowsPerPage,
+                      pageCount: _controller.dataCert.length / rowsPerPage + 1,
                       direction: Axis.horizontal,
                       itemHeight: 38,
                       itemWidth: 38,

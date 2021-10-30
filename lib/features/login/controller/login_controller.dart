@@ -14,6 +14,7 @@ class LoginController extends GetxController {
   }
 
   void submit(GlobalKey<FormState> formKey) async {
+    // EcertSmartContract();
     if (formKey.currentState!.validate()) {
       CustomDialog.showLoading();
       await Future.delayed(1.seconds);

@@ -1,6 +1,6 @@
-import 'package:ecert/core/ipfs_client/ipfs_client.dart';
-import 'package:ecert/core/ipfs_client/models/cid.dart';
-import 'package:ecert/core/ipfs_client/models/unix_fs_entry.dart';
+import 'package:ecert/ipfs/ipfs_client/ipfs_client.dart';
+import 'package:ecert/ipfs/ipfs_client/models/cid.dart';
+import 'package:ecert/ipfs/ipfs_client/models/unix_fs_entry.dart';
 
 class FilesApi {
   late IpfsClient _client;

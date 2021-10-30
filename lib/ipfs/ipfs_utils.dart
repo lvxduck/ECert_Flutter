@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:ecert/core/helper/extension.dart';
-import 'package:ecert/core/ipfs_client/ipfs_client.dart';
-import 'package:ecert/core/ipfs_client/models/unix_fs_entry.dart';
+import 'package:ecert/ipfs/ipfs_client/ipfs_client.dart';
+import 'package:ecert/ipfs/ipfs_client/models/unix_fs_entry.dart';
 import 'package:http_parser/http_parser.dart';
 import 'package:http/http.dart' as http;
 

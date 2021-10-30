@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:ecert/core/helper/ipfs_utils.dart';
+import 'package:ecert/ipfs/ipfs_utils.dart';
 import 'package:ecert/core/widget/custom_dialog.dart';
 import 'package:ecert/features/home/model/certificate.dart';
 import 'package:flutter/material.dart';
@@ -23,11 +23,6 @@ class AddCertificateController extends GetxController {
   ];
 
   List<TextEditingController> textEditingControllers = [];
-
-  // void addCert(Certificate certificate) {
-  //   print("json: ${jsonEncode(certificate.toJson())}");
-  //   // IpfsUtils().uploadJsonData(content: "fdf", name: "fdf");
-  // }
 
   void submit(GlobalKey<FormState> formKey) async {
     if (formKey.currentState!.validate()) {
